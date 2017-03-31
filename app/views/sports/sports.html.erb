@@ -1,0 +1,54 @@
+<h1>Sports</h1>
+
+<div id="allSports">
+    <p id="soccer" class="sportBtn" data-sport="<%= @sport[:soccer] %>">soccer</p>
+<!--     <p class="sportBtn" data-sport="<%= @sport.basketball %>">basketball</p>
+<p class="sportBtn" data-sport="<%= @sport.baseball %>">baseball</p>
+<p class="sportBtn" data-sport="<%= @sport.football %>">football</p>
+<p class="sportBtn" data-sport="<%= @sport.tennis %>">tennis</p>
+<p class="sportBtn" data-sport="<%= @sport.golf %>">golf</p>
+<p class="sportBtn" data-sport="<%= @sport.volleyball %>">volleyball</p>
+<p class="sportBtn" data-sport="<%= @sport.rugby %>">rugby</p>
+<p class="sportBtn" data-sport="<%= @sport.hockey %>">hockey</p>
+<p class="sportBtn" data-sport="<%= @sport.nascar %>">nascar</p>
+ --></div>
+
+<script>
+
+$('.sportBtn').on('click', function (event){
+  console.log("click");
+  event.preventDefault();
+  var sport = event.currentTarget.id
+      $.ajax({
+        url: "/toggle_sport",
+        type: "GET",
+        data: { user_id: <%= current_user.id %>, sport: sport },
+      success: function (data) {
+        console.log("*** ajax success ***");
+        console.log("data", data);
+        function();
+       },
+      error: function(xhr, ajaxOptions, thrownError){
+        console.log("*** ajax error ***");
+       },
+       timeout : 15000//timeout of the ajax call
+      });
+  });
+
+
+
+</script>
+
+
+
+
+
+
+
+<div id="mySports">
+  <p><%= @response["team"]["name"] %></p>
+</div>
+
+<div id="sportFt">
+
+</div>

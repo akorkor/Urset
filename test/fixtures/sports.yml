@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  soccer: false
+  basketball: false
+  baseball: false
+  football: false
+  tennis: false
+  golf: false
+  volleyball: false
+  rugby: false
+  hockey: false
+  nascar: false
+
+two:
+  user_id: 1
+  soccer: false
+  basketball: false
+  baseball: false
+  football: false
+  tennis: false
+  golf: false
+  volleyball: false
+  rugby: false
+  hockey: false
+  nascar: false

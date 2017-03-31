@@ -1,0 +1,74 @@
+body{
+
+}
+#gradient{
+  height: 100%;
+  background: #005960;
+}
+/* ======= ======= header ======= ======= */
+#sportPort{
+  background: linear-gradient(23deg, #191970,#778899);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 35s ease infinite;
+  -moz-animation: AnimationName 35s ease infinite;
+  -o-animation: AnimationName 35s ease infinite;
+  animation: AnimationName 35s ease infinite;
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  height: 250px;
+  width: 250px;
+  margin: 200px;
+  margin-left: 500px;
+  text-align: center;
+  box-shadow: 4px 5px 5px;
+}
+#sporTex{
+  font: black;
+  font-size: 60px;
+  margin-top: 100px;
+}
+#allSports{
+  border: 1px solid;
+  height: 40px;
+  width: auto;
+}
+.sportBtn{
+  background: red;
+  height: 20px;
+  width: 50px;
+  float: left;
+}
+#mySports{
+  border: 1px solid;
+  height: 500px;
+  width: 300px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+#sportFt{
+  border: 1px solid;
+  height: 500px;
+  width: 300px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 50px;
+}
