@@ -25,7 +25,6 @@ class SportsController < ApplicationController
     @sport = Sport.where(user_id: current_user).first
     puts "\n@sport:#{@sport.inspect}"
 
-    @sportBtn = @sport.soccer
 
   end
 
@@ -44,7 +43,9 @@ class SportsController < ApplicationController
     end
     @sport = Sport.find(current_user.id)
     puts "\n@sport:#{@sport.inspect}"
-    render json: { sport_select: @sport[params[:sport]].to_json }
+    render json: {
+      sport_select: @sport[params[:sport]].to_json
+    }
   end
 
   # GET /sports

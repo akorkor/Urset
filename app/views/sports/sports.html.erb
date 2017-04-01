@@ -1,17 +1,37 @@
 <h1>Sports</h1>
 
 <div id="allSports">
-    <p id="soccer" class="sportBtn" data-sport="<%= @sport[:soccer] %>">soccer</p>
-<!--     <p class="sportBtn" data-sport="<%= @sport.basketball %>">basketball</p>
-<p class="sportBtn" data-sport="<%= @sport.baseball %>">baseball</p>
-<p class="sportBtn" data-sport="<%= @sport.football %>">football</p>
-<p class="sportBtn" data-sport="<%= @sport.tennis %>">tennis</p>
-<p class="sportBtn" data-sport="<%= @sport.golf %>">golf</p>
-<p class="sportBtn" data-sport="<%= @sport.volleyball %>">volleyball</p>
-<p class="sportBtn" data-sport="<%= @sport.rugby %>">rugby</p>
-<p class="sportBtn" data-sport="<%= @sport.hockey %>">hockey</p>
-<p class="sportBtn" data-sport="<%= @sport.nascar %>">nascar</p>
- --></div>
+    <button type="button" id="soccer" class="sportBtn" data-sport="<%= @sport[:soccer] %>">soccer</button>
+    <button type="button" id="basketball" class="sportBtn" data-sport="<%= @sport.basketball %>">basketball</button>
+    <button type="button" id="baseball" class="sportBtn" data-sport="<%= @sport.baseball %>">baseball</button>
+    <button type="button" id="football" class="sportBtn" data-sport="<%= @sport.football %>">football</button>
+    <button type="button" id="tennis" class="sportBtn" data-sport="<%= @sport.tennis %>">tennis</button>
+    <button type="button" id="golf" class="sportBtn" data-sport="<%= @sport.golf %>">golf</button>
+    <button type="button" id="volleyball" class="sportBtn" data-sport="<%= @sport.volleyball %>">volleyball</button>
+    <button type="button" id="rugby" class="sportBtn" data-sport="<%= @sport.rugby %>">rugby</button>
+    <button type="button" id="hockey" class="sportBtn" data-sport="<%= @sport.hockey %>">hockey</button>
+    <button type="button" id="nascar" class="sportBtn" data-sport="<%= @sport.nascar %>">nascar</button>
+</div>
+
+<div id="mySports">
+<!--   <p><%= @response["team"]["name"] %></p>-->
+
+    <% sport_columns = Sport.column_names %>
+    <% sport_columns.each do |c| %>
+      <% if @sport[c.to_sym] == true %>
+          <div class="sel-sports">
+            <a href="get_sport_data"><%= c %></a>
+          </div>
+      <% end %>
+    <% end %>
+
+</div>
+
+<div id="sportFt">
+
+</div>
+
+
 
 <script>
 
@@ -19,36 +39,22 @@ $('.sportBtn').on('click', function (event){
   console.log("click");
   event.preventDefault();
   var sport = event.currentTarget.id
-      $.ajax({
-        url: "/toggle_sport",
-        type: "GET",
-        data: { user_id: <%= current_user.id %>, sport: sport },
-      success: function (data) {
-        console.log("*** ajax success ***");
-        console.log("data", data);
-        function();
-       },
-      error: function(xhr, ajaxOptions, thrownError){
-        console.log("*** ajax error ***");
-       },
-       timeout : 15000//timeout of the ajax call
-      });
+  $.ajax({
+    url: "/toggle_sport",
+    type: "GET",
+    data: { user_id: <%= current_user.id %>, sport: sport },
+  success: function (data) {
+    console.log("*** ajax success ***");
+    console.log("data", data);
+    if() {
+
+    }
+   },
+  error: function(xhr, ajaxOptions, thrownError){
+    console.log("*** ajax error ***");
+  }
   });
 
-
+});
 
 </script>
-
-
-
-
-
-
-
-<div id="mySports">
-  <p><%= @response["team"]["name"] %></p>
-</div>
-
-<div id="sportFt">
-
-</div>

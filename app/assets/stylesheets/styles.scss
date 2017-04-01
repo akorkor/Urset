@@ -51,15 +51,16 @@ body{
   width: auto;
 }
 .sportBtn{
-  background: red;
+  background: grey;
   height: 20px;
-  width: 50px;
+  width: 65px;
   float: left;
+  margin-left: 50px;
 }
 #mySports{
   border: 1px solid;
   height: 500px;
-  width: 300px;
+  width: 150px;
   float: left;
   margin-top: 30px;
   margin-left: 50px;
@@ -67,8 +68,15 @@ body{
 #sportFt{
   border: 1px solid;
   height: 500px;
-  width: 300px;
+  width: 700px;
   float: right;
   margin-top: 30px;
   margin-right: 50px;
+}
+.sel-sports{
+  background: red;
+  height: 40px;
+  width: 80px;
+  margin: 10px;
+
 }
